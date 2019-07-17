@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Installing NanoSpell Spellchecker for TinyMCE - Step By Step Helper</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="server/installer/theme.css" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+      <!--[if gt IE 7]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <![endif]-->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <script src="server/installer/test.js"></script>
+      <script src="https://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+   </head>
+   <body>
+
+      <textarea class="tinymce_edittor" style='height:185px'>Helllo Worlb! PHP is working!</textarea>
+
+<script type="text/javascript">
+  tinymce.init({
+      //selector: "textarea",
+      selector: ".tinymce_edittor",
+      forced_root_block : 'div',
+        plugins: [
+          "advlist autolink lists link image charmap print preview anchor media",
+          "searchreplace visualblocks code fullscreen",
+          "insertdatetime table contextmenu paste textcolor directionality",
+      ],
+      image_advtab: true,
+spellchecker_language: 'en',
+      toolbar: "insertfile undo redo | styleselect | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | preview code ",     
+      external_plugins: { "nanospell": "http://205.134.251.196/~examin8/CI/nanospell/plugin.js" },
+ nanospell_server:"php"
+  });
+</script>
+   </body>
+</html>
